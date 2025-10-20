@@ -22,12 +22,43 @@
             color: #ff4500; /* Accent color on hover */
             text-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
         }
-        .hero-bg {
-            /* Using a darker overlay for better logo contrast */
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://placehold.co/1200x600/1f2937/f3f4f6?text=Vibrant+Wok+Cooking');
-            background-size: cover;
-            background-position: center;
+
+        /* --- New Video Hero Styling --- */
+        .hero-video-container {
+            position: relative;
+            overflow: hidden;
+            min-height: 65vh; /* Increased height for better video display */
         }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Strong dark-to-black gradient overlay for high contrast */
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.9));
+            z-index: 20;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 30; /* Ensures content is above the overlay */
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* ------------------------------- */
+
         #menu-container::-webkit-scrollbar {
             width: 8px;
         }
@@ -94,24 +125,38 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
         <section id="home-page" class="page-content">
-            <div class="hero-bg min-h-[60vh] rounded-xl shadow-2xl flex items-center justify-center text-center p-6 mb-12">
-                <div>
-                    
-                    <!-- Hero Logo: Using responsive max-width to ensure it looks perfect on all screens -->
-                    <div class="mx-auto mb-6 w-full max-w-sm sm:max-w-md lg:max-w-lg">
-                        <img src="logo.jpeg" alt="Spicy Wok Logo" class="w-full h-auto object-contain">
-                    </div>
-                    
-                    <p class="text-xl sm:text-2xl text-[#ff4500] font-semibold mb-8">
-                        The Best of Thai & Oriental Cuisine in Canary Wharf
-                    </p>
-                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                        <button onclick="showPage('order')" class="cta-button bg-[#ff4500] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#e03c00]">
-                            ORDER ONLINE NOW
-                        </button>
-                        <button onclick="showPage('menu')" class="cta-button bg-gray-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-600">
-                            VIEW FULL MENU
-                        </button>
+            <!-- Hero Section: Now with Video Background -->
+            <div class="hero-video-container rounded-xl shadow-2xl mb-12">
+                <!-- Video Background Element -->
+                <video class="hero-video" autoplay loop muted playsinline poster="https://placehold.co/1200x600/1f2937/f3f4f6?text=Vibrant+Wok+Cooking+Fallback">
+                    <!-- Using the specified cafe.mp4 file -->
+                    <source src="cafe.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <!-- Dark Overlay -->
+                <div class="hero-overlay"></div>
+
+                <!-- Content Layer -->
+                <div class="hero-content text-center p-6">
+                    <div>
+                        <!-- Hero Logo: Perfectly centered and prominent -->
+                        <div class="mx-auto mb-6 w-full max-w-xs sm:max-w-sm lg:max-w-md">
+                            <!-- Using logo.jpeg as per the original structure -->
+                            <img src="logo.jpeg" alt="Spicy Wok Logo" class="w-full h-auto object-contain">
+                        </div>
+                        
+                        <p class="text-xl sm:text-2xl text-white font-semibold mb-8 backdrop-blur-sm bg-black/30 p-2 rounded-lg inline-block">
+                            <span class="text-[#ff4500] font-extrabold">AUTHENTIC</span> Thai & Oriental Cuisine in Canary Wharf
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                            <button onclick="showPage('order')" class="cta-button bg-[#ff4500] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#e03c00]">
+                                ORDER ONLINE NOW
+                            </button>
+                            <button onclick="showPage('menu')" class="cta-button bg-gray-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-600">
+                                VIEW FULL MENU
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
