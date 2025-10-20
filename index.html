@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spicy Wok - Authentic Thai & Oriental Cuisine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d; /* Dark background */
+            color: #f3f4f6;
+        }
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            color: #ff4500; /* Chili red/orange for "SPICY" */
+        }
+        .nav-link:hover {
+            color: #ff4500; /* Accent color on hover */
+            text-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('https://placehold.co/1200x600/1f2937/f3f4f6?text=Vibrant+Wok+Cooking');
+            background-size: cover;
+            background-position: center;
+        }
+        #menu-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        #menu-container::-webkit-scrollbar-thumb {
+            background-color: #ff4500;
+            border-radius: 4px;
+        }
+        #menu-container::-webkit-scrollbar-track {
+            background-color: #1f2937;
+        }
+
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px -3px rgba(255, 69, 0, 0.3);
+        }
+
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <nav class="sticky top-0 z-50 bg-black/80 backdrop-blur-sm shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <div class="h-14 w-auto flex items-center">
+                        <span class="text-xl font-extrabold text-[#ff4500] tracking-widest mr-2">SPICY</span>
+                        <span class="text-xl font-extrabold text-white tracking-widest">WOK</span>
+                        <div class="ml-2 w-8 h-8 bg-center bg-contain bg-no-repeat" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PHBhdGggZD0iTTI1IDRhMjEgMjEgMCAwIDAgMCA0MiA0IDQgMCAwIDEtMSA0Yy0uMi0uNC01LTQtMTItOGw1LTljMi0yIDUtMyA4LTQgNi0xIDExIDAgMTcgMiAyIDIgNSA0IDUgNi43YTQuMjYgNC4yNiAwIDAgMS01LTYuNzUgMjUgMjUgMCAxIDAgLTE4LjUgMjguNiIgbGltZT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC94bGluayIgbT0iMSIgYz0iIzc1NzU3NSIgZD0iTTE1IDE1djEwbDUuNTMgNS41M2wxMy4xMi0xMy4xMiAyLjQ3LTQuNDFjLjY2LS44OCAxLjY1LTEuMzIgMi42NC0xLjMyIDIuNTUgMCA0LjY2IDItNC42NiA0LjY2IDAgMS4wNy0uMzIgMi4wNi0xLjMyIDIuNjZsLTQuNDEgMi40N2wtMTMuMTIgMTMuMTJ2Ny42NWMwIDEuMi45IDEuNyAxLjggMS43czEuOC0uNSAxLjgtMS43YTMgMyAwIDAgMC0zLTIuNXYtOC42NWMwLS45LS40LTItMS4yLTItLjggMC0xLjMtLjUtMS4zLTEuMnYtNi45Yy0uNC0xLjQtLjMtMi42LjctMy42IDEuNC0xLjMgMy0xLjMgNC4zIDBzMi45IDIuNyAyLjkgNC42YzAgMS43LS45IDItMi42IDEtMS40LS44LTIuMi0yLjItMi4yLTMuNiAwLS41LjgtMS4zIDEtMS41LjgtLjMgMS40LS4zIDIgMGMuOS41IDEuNiAxLjQgMS42IDIuNC0uMS40LS41LjctMSAuN2MtLjEgMC0uMiAwLS4zIDAtLjQgMC0uNS0uMy0uNS0uNCAwLS4xIDAtLjItLjItLjMgMS4xLTEuNCAyLjItMi4zIDMuMy0yLjMgMiAwIDMgMS4zIDMgMy4zIDAgMi40LTMuNyA0LjQtNS43IDUuOWEzLjkgMy45IDAgMCAwLTEuMyAxLjJjLS45IDEuNi0xLjMgMy40LTEuMiA1LjIgMCAyIC41IDQuMSAxLjIgNS45IDAgMC0uMSAwLS4xIDAtMi42LS42LTQuOS0xLjYtNi41LTIuNy0uOS0uNy0xLjUtMS43LTEuNS0yLjcgMC0uOS41LTEuNSAxLjUtMS41IDEgMCAxLjguNiAxLjggMS43YTIgMiAwIDAgMC0yIDEuOXoiLz48L3N2Zz4=');"></div>
+                    </div>
+                    </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" onclick="showPage('home')" class="nav-link text-gray-300 px-3 py-2 rounded-md text-base font-medium">Home</a>
+                        <a href="#menu" onclick="showPage('menu')" class="nav-link text-gray-300 px-3 py-2 rounded-md text-base font-medium">Menu</a>
+                        <a href="#order" onclick="showPage('order')" class="nav-link text-gray-300 px-3 py-2 rounded-md text-base font-medium">Order Online</a>
+                        <a href="#contact" onclick="showPage('contact')" class="nav-link text-gray-300 px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-[#ff4500] hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <svg id="menu-icon-open" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90">
+                <a href="#home" onclick="showPage('home'); closeMobileMenu();" class="nav-link text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#menu" onclick="showPage('menu'); closeMobileMenu();" class="nav-link text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Menu</a>
+                <a href="#order" onclick="showPage('order'); closeMobileMenu();" class="nav-link text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Order Online</a>
+                <a href="#contact" onclick="showPage('contact'); closeMobileMenu();" class="nav-link text-gray-300 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <section id="home-page" class="page-content">
+            <div class="hero-bg min-h-[60vh] rounded-xl shadow-2xl flex items-center justify-center text-center p-6 mb-12">
+                <div>
+                    <div class="mx-auto mb-4" style="width: 150px; height: 150px;">
+                        <img src="https://placehold.co/150x150/000000/ffffff?text=SPICY%20WOK%20LOGO" alt="Spicy Wok Logo" class="h-full w-full object-contain">
+                    </div>
+                    <h1 class="text-5xl sm:text-7xl font-extrabold text-white mb-4 leading-tight">
+                        SPICY WOK
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-[#ff4500] font-semibold mb-8">
+                        The Best of Thai & Oriental Cuisine in Canary Wharf
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <button onclick="showPage('order')" class="cta-button bg-[#ff4500] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#e03c00]">
+                            ORDER ONLINE NOW
+                        </button>
+                        <button onclick="showPage('menu')" class="cta-button bg-gray-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-600">
+                            VIEW FULL MENU
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-4xl font-bold text-center text-white mb-8">Chef's Recommendations</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#1f2937] p-6 rounded-xl shadow-lg transition duration-300 hover:scale-[1.02]">
+                    <img src="https://placehold.co/600x400/1f2937/ff4500?text=Green+Curry" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1f2937/ff4500?text=Thai+Green+Curry';" class="rounded-lg mb-4 w-full h-40 object-cover">
+                    <h3 class="text-xl font-semibold text-[#ff4500] mb-2">Thai Green Curry (Chicken)</h3>
+                    <p class="text-gray-400 text-sm mb-3">Aromatic green curry paste with coconut milk, bamboo shoots, and Thai basil.</p>
+                    <span class="text-2xl font-bold text-white">£9.95</span>
+                </div>
+                <div class="bg-[#1f2937] p-6 rounded-xl shadow-lg transition duration-300 hover:scale-[1.02]">
+                    <img src="https://placehold.co/600x400/1f2937/ff4500?text=Singapore+Noodles" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1f2937/ff4500?text=Singapore+Noodles';" class="rounded-lg mb-4 w-full h-40 object-cover">
+                    <h3 class="text-xl font-semibold text-[#ff4500] mb-2">Singapore Noodles</h3>
+                    <p class="text-gray-400 text-sm mb-3">Stir-fried vermicelli with a kick of curry powder, chicken, prawn, and pork.</p>
+                    <span class="text-2xl font-bold text-white">£11.95</span>
+                </div>
+                <div class="bg-[#1f2937] p-6 rounded-xl shadow-lg transition duration-300 hover:scale-[1.02]">
+                    <img src="https://placehold.co/600x400/1f2937/ff4500?text=Katsu+Curry" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1f2937/ff4500?text=Chicken+Katsu+Curry';" class="rounded-lg mb-4 w-full h-40 object-cover">
+                    <h3 class="text-xl font-semibold text-[#ff4500] mb-2">Chicken Katsu Curry Bowl</h3>
+                    <p class="text-gray-400 text-sm mb-3">Crispy chicken katsu served over rice with our rich, savory Japanese curry sauce.</p>
+                    <span class="text-2xl font-bold text-white">£9.95</span>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <h2 class="text-4xl font-bold text-white mb-4">Our Commitment to Flavor</h2>
+                <p class="text-gray-400 max-w-3xl mx-auto">
+                    At Spicy Wok, we blend the bold, authentic flavours of Thai and Oriental cuisine, using the freshest ingredients to create dishes that excite your palate. Located right in the heart of Canary Wharf, we are your perfect spot for a fast, flavour-packed lunch or a satisfying dinner.
+                </p>
+            </div>
+        </section>
+
+        <section id="menu-page" class="page-content hidden">
+            <h1 class="text-5xl font-extrabold text-white mb-6 text-center">THE FULL WOK MENU</h1>
+
+            <div class="flex flex-wrap justify-center gap-3 p-4 bg-[#1f2937] rounded-xl mb-8 shadow-xl">
+                <a href="#appetisers" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Appetisers</a>
+                <a href="#noodles" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Stir-Fried Noodles</a>
+                <a href="#curry" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Thai Curry</a>
+                <a href="#specials" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Wok Specials</a>
+                <a href="#soups" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Noodle Soups</a>
+                <a href="#rice" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Fried Rice</a>
+                <a href="#donburi" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Donburi & Bowls</a>
+                <a href="#drinks" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Drinks & Desserts</a>
+            </div>
+
+            <div id="menu-container" class="space-y-12 overflow-y-auto max-h-[70vh] p-4">
+                </div>
+        </section>
+
+        <section id="order-page" class="page-content hidden text-center">
+            <div class="bg-[#1f2937] p-10 rounded-xl shadow-2xl">
+                <h1 class="text-5xl font-extrabold text-[#ff4500] mb-6">Start Your Order!</h1>
+                <p class="text-xl text-gray-300 mb-8">We deliver the authentic taste of Spicy Wok right to your door in Canary Wharf and surrounding areas.</p>
+
+                <div class="grid sm:grid-cols-2 gap-6 max-w-xl mx-auto">
+                    <a href="https://www.just-eat.co.uk/restaurants-spicy-wok---3-poplar/menu" target="_blank" class="cta-button bg-red-600 text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:bg-red-700 flex items-center justify-center space-x-3">
+                        <i data-lucide="external-link" class="w-6 h-6"></i>
+                        <span>ORDER VIA JUST EAT</span>
+                    </a>
+                    <a href="https://www.ubereats.com/gb/store/spicy-wok/xTN2R-k8UNOcA_d_Xn6Pfg" target="_blank" class="cta-button bg-black text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:bg-gray-800 flex items-center justify-center space-x-3 border border-white">
+                        <i data-lucide="external-link" class="w-6 h-6"></i>
+                        <span>ORDER VIA UBER EATS</span>
+                    </a>
+                </div>
+
+                <p class="text-gray-400 mt-8 text-sm">For large corporate orders or specific catering requests, please contact us directly.</p>
+            </div>
+        </section>
+
+        <section id="contact-page" class="page-content hidden">
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="bg-[#1f2937] p-8 rounded-xl shadow-2xl h-full">
+                    <h1 class="text-4xl font-bold text-[#ff4500] mb-6">Find Us</h1>
+
+                    <div class="space-y-6 text-lg">
+                        <p class="flex items-center space-x-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-red-400"></i>
+                            <span>Canary Wharf, London, E14 4QT</span>
+                        </p>
+                        <p class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-green-400"></i>
+                            <span>020 3888 3407 / 07834 195347 (As per menu footer)</span>
+                        </p>
+                        <p class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-blue-400"></i>
+                            <span>spicywok28@gmail.com</span>
+                        </p>
+                        <div class="pt-4">
+                            <h3 class="text-xl font-semibold text-white mb-2">Opening Hours (Estimated):</h3>
+                            <ul class="text-gray-400 space-y-1">
+                                <li>Monday - Friday: 11:00 am - 10:00 pm</li>
+                                <li>Saturday - Sunday: 11:00 am - 9:00 pm</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#1f2937] p-2 rounded-xl shadow-2xl">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.479630985223!2d-0.0163351842323758!3d51.50348747963321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487602b9e2233f21%3A0x77d61005b634863c!2sCanary%20Wharf%2C%20London!5e0!3m2!1sen!2suk!4v1634707200000!5m2!1sen!2suk" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="rounded-lg"
+                    ></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-black text-gray-400 p-6 mt-12">
+        <div class="max-w-7xl mx-auto text-center">
+            <p>© 2025 Spicy Wok. All rights reserved. | <span class="text-[#ff4500]">Authentic Asian Cuisine</span></p>
+            <div class="flex justify-center space-x-6 mt-3">
+                <a href="#" class="hover:text-[#ff4500]"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                <a href="#" class="hover:text-[#ff4500]"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                <a href="tel:02038883407" class="hover:text-[#ff4500]"><i data-lucide="phone" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data structure for the menu, transcribed from the image
+        const menuData = [
+            { id: 'appetisers', title: '1. Appetisers', items: [
+                { num: '1', name: 'Prawn Crackers', price: 2.95, desc: 'Crispy prawn crackers served with sweet chilli dip.' },
+                { num: '5', name: 'Tofu Pha (5pcs) (V)', price: 5.95, desc: 'Fried tofu pieces served with sweet chilli & peanut sauce.' },
+                { num: '9', name: 'Prawn Tempura (4pcs)', price: 5.95, desc: 'Lightly battered and deep-fried king prawns.' },
+                { num: '11', name: 'Tom Yum (Chicken)', price: 4.95, desc: 'Classic hot and sour soup with lemongrass, galangal & mushroom.' },
+                { num: '13', name: 'Thai Coconut Soup (Prawn)', price: 5.95, desc: 'Creamy coconut milk soup with galangal, lemongrass & kaffir lime.' },
+            ]},
+            { id: 'noodles', title: '2. Stir-Fried Noodles', items: [
+                { num: '16', name: 'Pad See Ew (Beef)', price: 10.95, desc: 'Thick rice noodles stir-fried with Chinese broccoli, egg, and dark soy sauce.' },
+                { num: '20', name: 'Pad Kee Mao Wok Special (Spicy)', price: 11.95, desc: 'The famous spicy Drunken Noodles with chicken, prawn, and pork.' },
+                { num: '22', name: 'Pad Thai Khok Soi', price: 10.95, desc: 'Wok-fried rice noodles with caramelised onion, spring onion, fresh chilli & red pepper in our special sauce.' },
+                { num: '23', name: 'Yaki Udon (Duck)', price: 11.95, desc: 'Japanese Udon noodles with rich teriyaki sauce and egg.' },
+                { num: '24', name: 'Singapore Noodles', price: 11.95, desc: 'Thin vermicelli noodles with spicy curry powder, chicken, prawn & pork.' },
+            ]},
+            { id: 'curry', title: '3. Thai Curry Dishes', items: [
+                { num: '25', name: 'Thai Green Curry (Chicken)', price: 9.95, desc: 'A rich and fragrant coconut milk curry with Thai basil and vegetables.' },
+                { num: '27', name: 'Thai Red Curry (Prawn)', price: 11.95, desc: 'Spicy red chilli paste curry with coconut milk, bamboo shoots, and basil.' },
+                { num: '28', name: 'Panang Curry (Beef)', price: 10.95, desc: 'Thick, milder red curry with coconut milk and kaffir lime leaves.' },
+                { num: '30', name: 'Massaman Curry (Duck)', price: 11.95, desc: 'A rich, mild, and slightly sweet curry with potatoes and peanuts.' },
+            ]},
+            { id: 'specials', title: '4. Spicy Wok Special Dishes', items: [
+                { num: '31', name: 'Pad Piew Wan (Sweet & Sour Chicken)', price: 9.95, desc: 'Stir-fried in sweet and sour sauce with onion, cucumber, and pineapple.' },
+                { num: '36', name: 'Spicy Stir-Fried Noodles', price: 11.95, desc: 'Our signature spicy wok dish with mixed meats and special sauce.' },
+                { num: '38', name: 'Pad Cha', price: 12.95, desc: 'Very spicy stir-fry with mixed seafood, chilli, ginger, peppercorns, and Thai basil.' },
+                { num: '44', name: 'Thai Chilli Oil (Very Hot!)', price: 1.50, desc: 'Extra chilli oil for an intense kick.' },
+            ]},
+            { id: 'soups', title: '5. Noodle Soups', items: [
+                { num: '42', name: 'Tom Yum Noodles Soup (Chicken)', price: 9.95, desc: 'Hot and sour soup base with noodles, lemongrass, and mushrooms.' },
+                { num: '43', name: 'Kuay Tiew Tom Yum (Baanbles Soup) (Prawn)', price: 11.95, desc: 'A special clear soup base with lemongrass, bean sprouts, and roasted chilli.' },
+                { num: '46', name: 'Miso Noodles Soup (Beef)', price: 10.95, desc: 'Traditional Japanese miso broth with noodles and vegetables.' },
+            ]},
+            { id: 'rice', title: '6. Fried Rice', items: [
+                { num: '48', name: 'Mixed Veg Fried Rice', price: 8.95, desc: 'Wok-tossed rice with seasonal vegetables, egg, and soy.' },
+                { num: '51', name: 'Spicy Fried Rice (Prawn)', price: 11.95, desc: 'Our spicy house-style fried rice with chilli, egg, and Asian greens.' },
+                { num: '52', name: 'Thai Fried Rice (Duck)', price: 11.95, desc: 'Flavourful Thai-style fried rice with fragrant herbs and duck.' },
+            ]},
+            { id: 'donburi', title: '7. Donburi & Curry Bowls', items: [
+                { num: '54', name: 'Chicken Katsu Curry Bowl', price: 9.95, desc: 'Crispy katsu chicken, rice, and savory Japanese curry sauce.' },
+                { num: '56', name: 'Prawn Katsu Curry Bowl', price: 10.95, desc: 'Panko-breaded prawns, rice, and Japanese curry sauce.' },
+                { num: '58', name: 'Curry Teriyaki Donburi (Salmon)', price: 11.95, desc: 'Grilled salmon with both curry and teriyaki sauce over rice.' },
+            ]},
+            { id: 'drinks', title: '8. Drinks & Desserts (59 - 99)', items: [
+                { num: '75', name: 'Mocito Classic', price: 3.99, desc: 'Refreshing non-alcoholic lime and mint drink.' },
+                { num: '79', name: 'Mango Lassi', price: 3.99, desc: 'Sweet yoghurt drink with fresh mango.' },
+                { num: '85', name: 'Coconut Water', price: 2.95, desc: 'Pure, refreshing coconut water.' },
+                { num: '99', name: 'Ginger & Green Tea', price: 2.39, desc: 'A warming and healthy hot drink.' },
+            ]},
+        ];
+
+        // Global state for page visibility
+        let currentPage = 'home';
+
+        /**
+         * Switches the visible content section of the website.
+         * @param {string} pageId - The ID of the page to show ('home', 'menu', 'order', 'contact').
+         */
+        function showPage(pageId) {
+            document.querySelectorAll('.page-content').forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(`${pageId}-page`).classList.remove('hidden');
+            currentPage = pageId;
+
+            // Scroll to top of the page content
+            window.scrollTo(0, 0);
+
+            // Special function to ensure icons are rendered after content is visible
+            lucide.createIcons();
+        }
+
+        /**
+         * Renders the menu items dynamically into the menu container.
+         */
+        function renderMenu() {
+            const menuContainer = document.getElementById('menu-container');
+            menuContainer.innerHTML = ''; // Clear previous content
+
+            menuData.forEach(category => {
+                const categoryHtml = `
+                    <div id="${category.id}" class="bg-[#1f2937] p-6 rounded-xl shadow-xl border-l-4 border-[#ff4500]">
+                        <h2 class="text-3xl font-bold text-[#ff4500] mb-6">${category.title}</h2>
+                        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            ${category.items.map(item => `
+                                <div class="p-4 bg-gray-800 rounded-lg shadow-md transition duration-200 hover:bg-gray-700">
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-white">${item.num}. ${item.name}</h3>
+                                        <p class="text-sm text-gray-400 mt-1">${item.desc}</p>
+                                    </div>
+                                    <div class="mt-3">
+                                        <span class="text-2xl font-bold text-[#ff4500]">£${item.price.toFixed(2)}</span>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <p class="text-sm text-gray-500 mt-6 text-right">** This section includes a selection of items from the full menu. See in-store menu for all 99+ items. **</p>
+                    </div>
+                `;
+                menuContainer.innerHTML += categoryHtml;
+            });
+
+            if (currentPage === 'menu') {
+                lucide.createIcons();
+            }
+        }
+
+        /**
+         * Handles mobile navigation menu toggle.
+         */
+        function setupMobileMenu() {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+
+            button.addEventListener('click', () => {
+                const isExpanded = menu.classList.contains('hidden');
+                menu.classList.toggle('hidden', !isExpanded);
+                openIcon.classList.toggle('hidden', !isExpanded);
+                closeIcon.classList.toggle('hidden', isExpanded);
+                button.setAttribute('aria-expanded', isExpanded);
+            });
+        }
+
+        /**
+         * Closes the mobile menu after a link is clicked.
+         */
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+            const button = document.getElementById('mobile-menu-button');
+
+            menu.classList.add('hidden');
+            openIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            button.setAttribute('aria-expanded', false);
+        }
+
+        // Initialize on page load
+        window.onload = function() {
+            renderMenu();
+            setupMobileMenu();
+            // Start on the home page
+            showPage('home'); 
+        };
+    </script>
+</body>
+</html>
