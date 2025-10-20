@@ -14,10 +14,12 @@
             background-color: #0d0d0d; /* Dark background */
             color: #f3f4f6;
         }
-        .logo-text {
-            font-family: 'Poppins', sans-serif;
-            color: #ff4500; /* Chili red/orange for "SPICY" */
+        
+        /* New class to remove the black box effect by making the container transparent */
+        .logo-container {
+            background-color: transparent !important;
         }
+
         .nav-link:hover {
             color: #ff4500; /* Accent color on hover */
             text-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
@@ -55,11 +57,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <div class="h-14 w-auto flex items-center">
-                        <!-- Updated Logo path to logo.jpeg (based on file listing) -->
-                        <img src="logo.jpeg" alt="Spicy Wok Logo" class="h-12 w-auto object-contain">
+                    <!-- Adjusted container height for a better fit -->
+                    <div class="h-12 flex items-center">
+                        <img src="logo.jpeg" alt="Spicy Wok Logo" class="max-h-full max-w-full object-contain">
                     </div>
-                    </div>
+                </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="#home" onclick="showPage('home')" class="nav-link text-gray-300 px-3 py-2 rounded-md text-base font-medium">Home</a>
@@ -94,13 +96,14 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
         <section id="home-page" class="page-content">
+            <!-- Simplified hero and applied logo-container class for aesthetic fix -->
             <div class="hero-bg min-h-[60vh] rounded-xl shadow-2xl flex items-center justify-center text-center p-6 mb-12">
                 <div>
-                    <!-- Updated Logo path to logo.jpeg (based on file listing) -->
-                    <div class="mx-auto mb-6" style="max-width: 400px; height: auto;">
+                    <!-- Logo Container: Added logo-container class for transparent background and constrained width -->
+                    <div class="logo-container mx-auto mb-6 w-full max-w-xs sm:max-w-sm">
                         <img src="logo.jpeg" alt="Spicy Wok Logo" class="w-full h-auto object-contain">
                     </div>
-                    <!-- The redundant H1 tag "SPICY WOK" has been removed -->
+                    
                     <p class="text-xl sm:text-2xl text-[#ff4500] font-semibold mb-8">
                         The Best of Thai & Oriental Cuisine in Canary Wharf
                     </p>
@@ -148,11 +151,11 @@
         <section id="menu-page" class="page-content hidden">
             <h1 class="text-5xl font-extrabold text-white mb-6 text-center">THE FULL WOK MENU</h1>
             
-            <!-- Menu path confirmed as menu.jpg -->
             <div class="bg-[#1f2937] p-6 rounded-xl shadow-2xl mb-8">
                 <h2 class="text-3xl font-bold text-[#ff4500] mb-4 text-center">View Full Original Menu Image</h2>
                 <div class="overflow-x-auto">
-                    <img src="menu.jpg" alt="Spicy Wok full menu sheet" class="w-full h-auto max-w-none rounded-lg border-2 border-gray-700 mx-auto" style="min-width: 800px; max-width: 1200px;">
+                    <!-- The menu image should retain its size to be readable -->
+                    <img src="menu.jpeg" alt="Spicy Wok full menu sheet" class="w-full h-auto max-w-none rounded-lg border-2 border-gray-700 mx-auto" style="min-width: 800px; max-width: 1200px;">
                 </div>
                 <p class="text-center text-gray-400 mt-3 text-sm">Scroll horizontally to view the entire original menu image.</p>
             </div>
@@ -354,64 +357,49 @@
                                 </div>
                             `).join('')}
                         </div>
-                        <p class="text-sm text-gray-500 mt-6 text-right">** This section includes a selection of items from the full menu. See in-store menu for all 99+ items. **</p>
+                        <p class="text-sm text-gray-500 mt-6 text-right">** This section includes a selection of items from the full menu. See in-store menu for all 99 options.</p>
                     </div>
                 `;
                 menuContainer.innerHTML += categoryHtml;
             });
-
-            if (currentPage === 'menu') {
-                lucide.createIcons();
-            }
+            lucide.createIcons(); // Re-render icons on menu load
         }
 
-        /**
-         * Handles mobile navigation menu toggle.
-         */
-        function setupMobileMenu() {
-            const button = document.getElementById('mobile-menu-button');
-            const menu = document.getElementById('mobile-menu');
-            const openIcon = document.getElementById('menu-icon-open');
-            const closeIcon = document.getElementById('menu-icon-close');
 
-            button.addEventListener('click', () => {
-                const isExpanded = button.getAttribute('aria-expanded') === 'true' || false;
-                button.setAttribute('aria-expanded', !isExpanded);
-                menu.classList.toggle('hidden');
-                openIcon.classList.toggle('hidden');
-                closeIcon.classList.toggle('hidden');
-            });
-        }
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = document.getElementById('menu-icon-open');
+        const menuIconClose = document.getElementById('menu-icon-close');
 
-        /**
-         * Closes the mobile menu when a link is clicked.
-         */
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+
         function closeMobileMenu() {
-            const button = document.getElementById('mobile-menu-button');
-            const menu = document.getElementById('mobile-menu');
-            const openIcon = document.getElementById('menu-icon-open');
-            const closeIcon = document.getElementById('menu-icon-close');
-
-            button.setAttribute('aria-expanded', 'false');
-            menu.classList.add('hidden');
-            openIcon.classList.remove('hidden');
-            closeIcon.classList.add('hidden');
+            mobileMenu.classList.add('hidden');
+            menuIconOpen.classList.remove('hidden');
+            menuIconClose.classList.add('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
         }
 
-        // Initial setup on window load
-        window.onload = function() {
-            // Check hash and display correct page on load
-            const hash = window.location.hash.substring(1);
-            if (hash && document.getElementById(`${hash}-page`)) {
-                showPage(hash);
-            } else {
-                showPage('home');
-            }
-
+        // Initial setup
+        window.onload = () => {
+            showPage('home'); 
             renderMenu();
-            setupMobileMenu();
-            lucide.createIcons(); // Ensure icons are created after initial load
         };
+
+        // Handle initial load based on hash (optional, keeps link functionality)
+        if (window.location.hash) {
+            const hash = window.location.hash.substring(1);
+            if (['home', 'menu', 'order', 'contact'].includes(hash)) {
+                showPage(hash);
+            }
+        }
     </script>
 </body>
 </html>
