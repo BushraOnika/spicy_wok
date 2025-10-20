@@ -56,9 +56,8 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
                     <div class="h-14 w-auto flex items-center">
-                        <!-- START: LOGO MODIFICATION (Updated image source to logo.jpg) -->
-                        <img src="logo.jpg" alt="Spicy Wok Logo" class="h-12 w-auto object-contain">
-                        <!-- END: LOGO MODIFICATION -->
+                        <!-- Logo path: logo.jpeg -->
+                        <img src="logo.jpeg" alt="Spicy Wok Logo" class="h-12 w-auto object-contain">
                     </div>
                     </div>
                 <div class="hidden md:block">
@@ -97,12 +96,11 @@
         <section id="home-page" class="page-content">
             <div class="hero-bg min-h-[60vh] rounded-xl shadow-2xl flex items-center justify-center text-center p-6 mb-12">
                 <div>
-                    <!-- START: HERO LOGO MODIFICATION (Updated image source to logo.jpg) -->
+                    <!-- Logo path: logo.jpeg -->
                     <div class="mx-auto mb-6" style="max-width: 400px; height: auto;">
-                        <img src="logo.jpg" alt="Spicy Wok Logo" class="w-full h-auto object-contain">
+                        <img src="logo.jpeg" alt="Spicy Wok Logo" class="w-full h-auto object-contain">
                     </div>
                     <!-- The redundant H1 tag "SPICY WOK" has been removed -->
-                    <!-- END: HERO LOGO MODIFICATION -->
                     <p class="text-xl sm:text-2xl text-[#ff4500] font-semibold mb-8">
                         The Best of Thai & Oriental Cuisine in Canary Wharf
                     </p>
@@ -149,6 +147,15 @@
 
         <section id="menu-page" class="page-content hidden">
             <h1 class="text-5xl font-extrabold text-white mb-6 text-center">THE FULL WOK MENU</h1>
+            
+            <!-- NEW: Display the menu.jpg file -->
+            <div class="bg-[#1f2937] p-6 rounded-xl shadow-2xl mb-8">
+                <h2 class="text-3xl font-bold text-[#ff4500] mb-4 text-center">View Full Original Menu Image</h2>
+                <div class="overflow-x-auto">
+                    <img src="menu.jpg" alt="Spicy Wok full menu sheet" class="w-full h-auto max-w-none rounded-lg border-2 border-gray-700 mx-auto" style="min-width: 800px; max-width: 1200px;">
+                </div>
+                <p class="text-center text-gray-400 mt-3 text-sm">Scroll horizontally to view the entire original menu image.</p>
+            </div>
 
             <div class="flex flex-wrap justify-center gap-3 p-4 bg-[#1f2937] rounded-xl mb-8 shadow-xl">
                 <a href="#appetisers" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Appetisers</a>
@@ -215,7 +222,7 @@
 
                 <div class="bg-[#1f2937] p-2 rounded-xl shadow-2xl">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.479630985223!2d-0.0163351842323758!3d51.50348747963321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487602b9e2233f21%3A0x77d61005b634863c!2sCanary%20Wharf%2C%20London!5e0!3m2!1sen!2suk!4v1634707200000!5m2!1sen!2suk" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.479630985223!2d-0.0163351842323758!3d51.50348747963321!2m3!1f0!2f0!0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487602b9e2233f21%3A0x77d61005b634863c!2sCanary%20Wharf%2C%20London!5e0!3m2!1sen!2suk!4v1634707200000!5m2!1sen!2suk" 
                         width="100%" 
                         height="450" 
                         style="border:0;" 
@@ -242,13 +249,16 @@
     </footer>
 
     <script>
-        // Data structure for the menu, transcribed from the image
+        // Data structure for the menu, transcribed and expanded using the uploaded image
         const menuData = [
             { id: 'appetisers', title: '1. Appetisers', items: [
                 { num: '1', name: 'Prawn Crackers', price: 2.95, desc: 'Crispy prawn crackers served with sweet chilli dip.' },
                 { num: '5', name: 'Tofu Pha (5pcs) (V)', price: 5.95, desc: 'Fried tofu pieces served with sweet chilli & peanut sauce.' },
                 { num: '9', name: 'Prawn Tempura (4pcs)', price: 5.95, desc: 'Lightly battered and deep-fried king prawns.' },
+                // Added items from the menu image
+                { num: '10', name: 'Prawns & Chicken Spring Rolls (6pcs)', price: 5.95, desc: 'Homemade spring rolls with filling of seasoned prawns and chicken.' },
                 { num: '11', name: 'Tom Yum (Chicken)', price: 4.95, desc: 'Classic hot and sour soup with lemongrass, galangal & mushroom.' },
+                { num: '12', name: 'Tom Yum (Prawn)', price: 5.95, desc: 'Classic hot and sour soup with lemongrass, galangal, mushrooms & prawns.' },
                 { num: '13', name: 'Thai Coconut Soup (Prawn)', price: 5.95, desc: 'Creamy coconut milk soup with galangal, lemongrass & kaffir lime.' },
             ]},
             { id: 'noodles', title: '2. Stir-Fried Noodles', items: [
@@ -260,12 +270,18 @@
             ]},
             { id: 'curry', title: '3. Thai Curry Dishes', items: [
                 { num: '25', name: 'Thai Green Curry (Chicken)', price: 9.95, desc: 'A rich and fragrant coconut milk curry with Thai basil and vegetables.' },
+                // Added items from the menu image
+                { num: '26', name: 'Thai Red Curry (Chicken)', price: 9.95, desc: 'Spicy red chilli paste curry with coconut milk, bamboo shoots, and basil.' },
                 { num: '27', name: 'Thai Red Curry (Prawn)', price: 11.95, desc: 'Spicy red chilli paste curry with coconut milk, bamboo shoots, and basil.' },
                 { num: '28', name: 'Panang Curry (Beef)', price: 10.95, desc: 'Thick, milder red curry with coconut milk and kaffir lime leaves.' },
+                { num: '29', name: 'Massaman Curry (Beef)', price: 10.95, desc: 'A rich, mild, and slightly sweet curry with potatoes and peanuts.' },
                 { num: '30', name: 'Massaman Curry (Duck)', price: 11.95, desc: 'A rich, mild, and slightly sweet curry with potatoes and peanuts.' },
             ]},
             { id: 'specials', title: '4. Spicy Wok Special Dishes', items: [
                 { num: '31', name: 'Pad Piew Wan (Sweet & Sour Chicken)', price: 9.95, desc: 'Stir-fried in sweet and sour sauce with onion, cucumber, and pineapple.' },
+                // Added items from the menu image
+                { num: '33', name: 'Pad King (Ginger & Garlic)', price: 10.95, desc: 'Stir-fried with fresh ginger, garlic, mushroom, onion, and spring onion.' },
+                { num: '35', name: 'Pad Ka Prow (Hot Basil)', price: 10.95, desc: 'Stir-fried with fresh chilli, garlic, fine beans, and Thai holy basil.' },
                 { num: '36', name: 'Spicy Stir-Fried Noodles', price: 11.95, desc: 'Our signature spicy wok dish with mixed meats and special sauce.' },
                 { num: '38', name: 'Pad Cha', price: 12.95, desc: 'Very spicy stir-fry with mixed seafood, chilli, ginger, peppercorns, and Thai basil.' },
                 { num: '44', name: 'Thai Chilli Oil (Very Hot!)', price: 1.50, desc: 'Extra chilli oil for an intense kick.' },
