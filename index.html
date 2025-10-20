@@ -48,7 +48,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.45); /* Slightly darker overlay for dramatic effect */
+            /* Changed opacity from 0.45 to 0.75 for a "dark dark" type look */
+            background: rgba(0, 0, 0, 0.75); 
             z-index: 20; 
         }
 
@@ -86,10 +87,11 @@
 
     <nav class="sticky top-0 z-50 bg-black/80 backdrop-blur-sm shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-20">
+            <!-- Increased navbar height to h-24 -->
+            <div class="flex items-center justify-between h-24"> 
                 <div class="flex-shrink-0 flex items-center">
-                    <!-- Nav Logo -->
-                    <div class="h-20 flex items-center py-2"> 
+                    <!-- Increased logo container height to h-24 -->
+                    <div class="h-24 flex items-center py-2"> 
                         <img src="logo.jpeg" alt="Spicy Wok Logo" class="max-h-full max-w-full object-contain">
                     </div>
                 </div>
