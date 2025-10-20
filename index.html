@@ -23,7 +23,8 @@
             text-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
         }
         .hero-bg {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url('https://placehold.co/1200x600/1f2937/f3f4f6?text=Vibrant+Wok+Cooking');
+            /* Using a darker overlay for better logo contrast */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://placehold.co/1200x600/1f2937/f3f4f6?text=Vibrant+Wok+Cooking');
             background-size: cover;
             background-position: center;
         }
@@ -55,9 +56,9 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
                     <div class="h-14 w-auto flex items-center">
-                        <span class="text-xl font-extrabold text-[#ff4500] tracking-widest mr-2">SPICY</span>
-                        <span class="text-xl font-extrabold text-white tracking-widest">WOK</span>
-                        <div class="ml-2 w-8 h-8 bg-center bg-contain bg-no-repeat" style="background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PHBhdGggZD0iTTI1IDRhMjEgMjEgMCAwIDAgMCA0MiA0IDQgMCAwIDEtMSA0Yy0uMi0uNC01LTQtMTItOGw1LTljMi0yIDUtMyA4LTQgNi0xIDExIDAgMTcgMiAyIDIgNSA0IDUgNi43YTQuMjYgNC4yNiAwIDAgMS01LTYuNzUgMjUgMjUgMCAxIDAgLTE4LjUgMjguNiIgbGltZT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC94bGluayIgbT0iMSIgYz0iIzc1NzU3NSIgZD0iTTE1IDE1djEwbDUuNTMgNS41M2wxMy4xMi0xMy4xMiAyLjQ3LTQuNDFjLjY2LS44OCAxLjY1LTEuMzIgMi42NC0xLjMyIDIuNTUgMCA0LjY2IDItNC42NiA0LjY2IDAgMS4wNy0uMzIgMi4wNi0xLjMyIDIuNjZsLTQuNDEgMi40N2wtMTMuMTIgMTMuMTJ2Ny42NWMwIDEuMi45IDEuNyAxLjggMS43czEuOC0uNSAxLjgtMS43YTMgMyAwIDAgMC0zLTIuNXYtOC42NWMwLS45LS40LTItMS4yLTItLjggMC0xLjMtLjUtMS4zLTEuMnYtNi45Yy0uNC0xLjQtLjMtMi42LjctMy42IDEuNC0xLjMgMy0xLjMgNC4zIDBzMi45IDIuNyAyLjkgNC42YzAgMS43LS45IDItMi42IDEtMS40LS44LTIuMi0yLjItMi4yLTMuNiAwLS41LjgtMS4zIDEtMS41LjgtLjMgMS40LS4zIDIgMGMuOS41IDEuNiAxLjQgMS42IDIuNC0uMS40LS41LjctMSAuN2MtLjEgMC0uMiAwLS4zIDAtLjQgMC0uNS0uMy0uNS0uNCAwLS4xIDAtLjItLjItLjMgMS4xLTEuNCAyLjItMi4zIDMuMy0yLjMgMiAwIDMgMS4zIDMgMy4zIDAgMi40LTMuNyA0LjQtNS43IDUuOWEzLjkgMy45IDAgMCAwLTEuMyAxLjJjLS45IDEuNi0xLjMgMy40LTEuMiA1LjIgMCAyIC41IDQuMSAxLjIgNS45IDAgMC0uMSAwLS4xIDAtMi42LS42LTQuOS0xLjYtNi41LTIuNy0uOS0uNy0xLjUtMS43LTEuNS0yLjcgMC0uOS41LTEuNSAxLjUtMS41IDEgMCAxLjguNiAxLjggMS43YTIgMiAwIDAgMC0yIDEuOXoiLz48L3N2Zz4=');"></div>
+                        <!-- START: LOGO MODIFICATION (Updated image source to logo.jpg) -->
+                        <img src="logo.jpg" alt="Spicy Wok Logo" class="h-12 w-auto object-contain">
+                        <!-- END: LOGO MODIFICATION -->
                     </div>
                     </div>
                 <div class="hidden md:block">
@@ -96,12 +97,12 @@
         <section id="home-page" class="page-content">
             <div class="hero-bg min-h-[60vh] rounded-xl shadow-2xl flex items-center justify-center text-center p-6 mb-12">
                 <div>
-                    <div class="mx-auto mb-4" style="width: 150px; height: 150px;">
-                        <img src="https://placehold.co/150x150/000000/ffffff?text=SPICY%20WOK%20LOGO" alt="Spicy Wok Logo" class="h-full w-full object-contain">
+                    <!-- START: HERO LOGO MODIFICATION (Updated image source to logo.jpg) -->
+                    <div class="mx-auto mb-6" style="max-width: 400px; height: auto;">
+                        <img src="logo.jpg" alt="Spicy Wok Logo" class="w-full h-auto object-contain">
                     </div>
-                    <h1 class="text-5xl sm:text-7xl font-extrabold text-white mb-4 leading-tight">
-                        SPICY WOK
-                    </h1>
+                    <!-- The redundant H1 tag "SPICY WOK" has been removed -->
+                    <!-- END: HERO LOGO MODIFICATION -->
                     <p class="text-xl sm:text-2xl text-[#ff4500] font-semibold mb-8">
                         The Best of Thai & Oriental Cuisine in Canary Wharf
                     </p>
@@ -354,39 +355,40 @@
         function setupMobileMenu() {
             const button = document.getElementById('mobile-menu-button');
             const menu = document.getElementById('mobile-menu');
-            const openIcon = document.getElementById('menu-icon-open');
-            const closeIcon = document.getElementById('menu-icon-close');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
 
             button.addEventListener('click', () => {
-                const isExpanded = menu.classList.contains('hidden');
-                menu.classList.toggle('hidden', !isExpanded);
-                openIcon.classList.toggle('hidden', !isExpanded);
-                closeIcon.classList.toggle('hidden', isExpanded);
-                button.setAttribute('aria-expanded', isExpanded);
+                const isExpanded = button.getAttribute('aria-expanded') === 'true' || false;
+                button.setAttribute('aria-expanded', !isExpanded);
+                menu.classList.toggle('hidden');
+                iconOpen.classList.toggle('hidden');
+                iconClose.classList.toggle('hidden');
             });
         }
 
         /**
-         * Closes the mobile menu after a link is clicked.
+         * Closes the mobile menu. Called when a link inside the mobile menu is clicked.
          */
         function closeMobileMenu() {
             const menu = document.getElementById('mobile-menu');
-            const openIcon = document.getElementById('menu-icon-open');
-            const closeIcon = document.getElementById('menu-icon-close');
             const button = document.getElementById('mobile-menu-button');
+            const iconOpen = document.getElementById('menu-icon-open');
+            const iconClose = document.getElementById('menu-icon-close');
 
-            menu.classList.add('hidden');
-            openIcon.classList.remove('hidden');
-            closeIcon.classList.add('hidden');
-            button.setAttribute('aria-expanded', false);
+            if (!menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                button.setAttribute('aria-expanded', 'false');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            }
         }
 
-        // Initialize on page load
+        // Initialize the app when the window loads
         window.onload = function() {
             renderMenu();
             setupMobileMenu();
-            // Start on the home page
-            showPage('home'); 
+            showPage('home'); // Ensure the home page is visible on load
         };
     </script>
 </body>
