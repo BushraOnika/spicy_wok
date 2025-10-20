@@ -14,12 +14,10 @@
             background-color: #0d0d0d; /* Dark background */
             color: #f3f4f6;
         }
-        
-        /* New class to remove the black box effect by making the container transparent */
-        .logo-container {
-            background-color: transparent !important;
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            color: #ff4500; /* Chili red/orange for "SPICY" */
         }
-
         .nav-link:hover {
             color: #ff4500; /* Accent color on hover */
             text-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
@@ -57,8 +55,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <!-- Adjusted container height for a better fit -->
-                    <div class="h-12 flex items-center">
+                    <!-- Nav Logo: Increased container size to h-20 -->
+                    <div class="h-20 flex items-center py-2"> 
                         <img src="logo.jpeg" alt="Spicy Wok Logo" class="max-h-full max-w-full object-contain">
                     </div>
                 </div>
@@ -96,14 +94,15 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
         <section id="home-page" class="page-content">
-            <!-- Simplified hero and applied logo-container class for aesthetic fix -->
             <div class="hero-bg min-h-[60vh] rounded-xl shadow-2xl flex items-center justify-center text-center p-6 mb-12">
                 <div>
-                    <!-- Logo Container: Added logo-container class for transparent background and constrained width -->
-                    <div class="logo-container mx-auto mb-6 w-full max-w-xs sm:max-w-sm">
+                    
+                    <!-- Hero Logo: Increased max-w to XL and removed the unnecessary wrapper -->
+                    <div class="mx-auto mb-6 max-w-xl">
                         <img src="logo.jpeg" alt="Spicy Wok Logo" class="w-full h-auto object-contain">
                     </div>
                     
+
                     <p class="text-xl sm:text-2xl text-[#ff4500] font-semibold mb-8">
                         The Best of Thai & Oriental Cuisine in Canary Wharf
                     </p>
@@ -151,24 +150,24 @@
         <section id="menu-page" class="page-content hidden">
             <h1 class="text-5xl font-extrabold text-white mb-6 text-center">THE FULL WOK MENU</h1>
             
+            
             <div class="bg-[#1f2937] p-6 rounded-xl shadow-2xl mb-8">
                 <h2 class="text-3xl font-bold text-[#ff4500] mb-4 text-center">View Full Original Menu Image</h2>
                 <div class="overflow-x-auto">
-                    <!-- The menu image should retain its size to be readable -->
                     <img src="menu.jpeg" alt="Spicy Wok full menu sheet" class="w-full h-auto max-w-none rounded-lg border-2 border-gray-700 mx-auto" style="min-width: 800px; max-width: 1200px;">
                 </div>
                 <p class="text-center text-gray-400 mt-3 text-sm">Scroll horizontally to view the entire original menu image.</p>
             </div>
 
             <div class="flex flex-wrap justify-center gap-3 p-4 bg-[#1f2937] rounded-xl mb-8 shadow-xl">
-                <a href="#appetisers" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Appetisers</a>
-                <a href="#noodles" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Stir-Fried Noodles</a>
-                <a href="#curry" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Thai Curry</a>
-                <a href="#specials" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Wok Specials</a>
-                <a href="#soups" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Noodle Soups</a>
-                <a href="#rice" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Fried Rice</a>
-                <a href="#donburi" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Donburi & Bowls</a>
-                <a href="#drinks" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Drinks & Desserts</a>
+                <a href="#appetisers" onclick="scrollToId('appetisers')" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Appetisers</a>
+                <a href="#noodles" onclick="scrollToId('noodles')" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Stir-Fried Noodles</a>
+                <a href="#curry" onclick="scrollToId('curry')" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Thai Curry</a>
+                <a href="#specials" onclick="scrollToId('specials')" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Wok Specials</a>
+                <a href="#soups" onclick="scrollToId('soups')" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Noodle Soups</a>
+                <a href="#rice" onclick="scrollToId('rice')" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Fried Rice</a>
+                <a href="#donburi" onclick="scrollToId('donburi')" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Donburi & Bowls</a>
+                <a href="#drinks" onclick="scrollToId('drinks')" class="text-sm font-medium text-gray-300 hover:text-[#ff4500] py-2 px-4 rounded-full border border-gray-600 transition duration-300">Drinks & Desserts</a>
             </div>
 
             <div id="menu-container" class="space-y-12 overflow-y-auto max-h-[70vh] p-4">
@@ -357,49 +356,78 @@
                                 </div>
                             `).join('')}
                         </div>
-                        <p class="text-sm text-gray-500 mt-6 text-right">** This section includes a selection of items from the full menu. See in-store menu for all 99 options.</p>
+                        <p class="text-sm text-gray-500 mt-6 text-right">** This section includes a selection of items from the full menu. See in-store menu for all 99 items.</p>
                     </div>
                 `;
-                menuContainer.innerHTML += categoryHtml;
+                menuContainer.insertAdjacentHTML('beforeend', categoryHtml);
             });
-            lucide.createIcons(); // Re-render icons on menu load
         }
-
-
-        // Mobile menu functionality
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIconOpen = document.getElementById('menu-icon-open');
-        const menuIconClose = document.getElementById('menu-icon-close');
-
-        mobileMenuButton.addEventListener('click', () => {
-            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
-            menuIconOpen.classList.toggle('hidden');
-            menuIconClose.classList.toggle('hidden');
-        });
-
-        function closeMobileMenu() {
-            mobileMenu.classList.add('hidden');
-            menuIconOpen.classList.remove('hidden');
-            menuIconClose.classList.add('hidden');
-            mobileMenuButton.setAttribute('aria-expanded', 'false');
-        }
-
-        // Initial setup
-        window.onload = () => {
-            showPage('home'); 
-            renderMenu();
-        };
-
-        // Handle initial load based on hash (optional, keeps link functionality)
-        if (window.location.hash) {
-            const hash = window.location.hash.substring(1);
-            if (['home', 'menu', 'order', 'contact'].includes(hash)) {
-                showPage(hash);
+        
+        /**
+         * Scrolls the menu container to a specific category ID.
+         */
+        function scrollToId(id) {
+            const menuContainer = document.getElementById('menu-container');
+            const targetElement = document.getElementById(id);
+            if (targetElement && menuContainer) {
+                // Calculate the position relative to the menu container's scroll position
+                const offset = targetElement.offsetTop - menuContainer.offsetTop;
+                menuContainer.scrollTop = offset;
             }
         }
+
+        /**
+         * Toggles the visibility of the mobile menu.
+         */
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+                openIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+                openIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+
+        /**
+         * Closes the mobile menu after an item is clicked.
+         */
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+                openIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            }
+        }
+
+        document.getElementById('mobile-menu-button').addEventListener('click', toggleMobileMenu);
+
+        // Initialization function to run on page load
+        window.onload = function() {
+            // Check hash in URL on load and show the correct page, defaults to 'home'
+            const initialHash = window.location.hash.substring(1);
+            if (['home', 'menu', 'order', 'contact'].includes(initialHash)) {
+                showPage(initialHash);
+            } else {
+                showPage('home');
+            }
+            
+            // Render the menu content only once on load
+            renderMenu();
+
+            // Initialize Lucide icons
+            lucide.createIcons();
+        };
     </script>
 </body>
 </html>
