@@ -22,6 +22,11 @@
             color: #ff4500; /* Accent color on hover */
             text-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
         }
+        /* Increased max height of the logo image for better visibility */
+        .navbar-logo {
+            max-height: 50px; /* Increased from max-h-full (24px default) */
+            max-width: 150px; /* Ensures it scales well */
+        }
 
         /* --- Video Hero Styling: Pure Visual Impact --- */
         .hero-video-container {
@@ -40,7 +45,7 @@
             z-index: 10;
         }
         
-        /* Retained: Dark Overlay for mood and contrast, giving the video a "good" look */
+        /* Retained: Dark Overlay for mood and contrast, set to 75% opacity */
         .hero-video-container::before {
             content: '';
             position: absolute;
@@ -48,8 +53,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            /* Changed opacity from 0.45 to 0.75 for a "dark dark" type look */
-            background: rgba(0, 0, 0, 0.75); 
+            background: rgba(0, 0, 0, 0.75); /* Dark dark type look */
             z-index: 20; 
         }
 
@@ -92,7 +96,8 @@
                 <div class="flex-shrink-0 flex items-center">
                     <!-- Increased logo container height to h-24 -->
                     <div class="h-24 flex items-center py-2"> 
-                        <img src="logo.jpeg" alt="Spicy Wok Logo" class="max-h-full max-w-full object-contain">
+                        <!-- Added custom CSS class 'navbar-logo' to control the size -->
+                        <img src="logo.jpeg" alt="Spicy Wok Logo" class="navbar-logo object-contain">
                     </div>
                 </div>
                 <div class="hidden md:block">
@@ -469,3 +474,4 @@
     </script>
 </body>
 </html>
+
