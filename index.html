@@ -27,7 +27,8 @@
         .hero-video-container {
             position: relative;
             overflow: hidden;
-            min-height: 65vh; /* Increased height for better video display */
+            /* Increased height for maximum visual impact */
+            min-height: 75vh; 
         }
         .hero-video {
             position: absolute;
@@ -39,23 +40,13 @@
             transform: translate(-50%, -50%);
             z-index: 10;
         }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            /* Stronger gradient overlay for high contrast against video */
-            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95));
-            z-index: 20;
-        }
+        /* .hero-overlay CSS is removed to show the video clearly */
+
         .hero-content {
+            /* Content is intentionally empty, but keeping the container for future use */
             position: relative;
-            z-index: 30; /* Ensures content is above the overlay */
+            z-index: 30;
             height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         /* ------------------------------- */
 
@@ -126,35 +117,28 @@
 
         <section id="home-page" class="page-content">
             <!-- Hero Section: Video only in background, title is descriptive, not a logo -->
-            <div class="hero-video-container rounded-xl shadow-2xl mb-12">
-                <!-- Video Background Element -->
+            <div class="hero-video-container rounded-xl shadow-2xl mb-4">
+                <!-- Video Background Element (Full visibility, no overlay) -->
                 <video class="hero-video" autoplay loop muted playsinline poster="https://placehold.co/1200x600/1f2937/f3f4f6?text=Vibrant+Wok+Cooking+Fallback">
                     <source src="cafe.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
 
-                <!-- Dark Overlay (Stronger for better text readability) -->
-                <div class="hero-overlay"></div>
+                <!-- Content Layer (Now completely empty) -->
+                <div class="hero-content">
+                    <!-- Text removed per user request -->
+                </div>
+            </div>
 
-                <!-- Content Layer (Now focusing on the message and CTAs) -->
-                <div class="hero-content text-center p-6">
-                    <div>
-                        <!-- UPDATED: Using the .logo-text style for a dramatic, large header -->
-                        <h1 class="text-6xl sm:text-7xl lg:text-8xl logo-text font-black tracking-tighter mb-4 drop-shadow-lg leading-none">
-                            SPICY WOK
-                        </h1>
-                        <p class="text-xl sm:text-2xl text-white font-semibold mb-10 bg-black/70 px-4 py-2 rounded-lg inline-block border-2 border-[#ff4500]">
-                            Authentic Thai & Oriental Cuisine in Canary Wharf
-                        </p>
-                        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-                            <button onclick="showPage('order')" class="cta-button bg-[#ff4500] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#e03c00]">
-                                ORDER ONLINE NOW
-                            </button>
-                            <button onclick="showPage('menu')" class="cta-button bg-gray-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-600">
-                                VIEW FULL MENU
-                            </button>
-                        </div>
-                    </div>
+            <!-- CTA Buttons moved OUTSIDE the video container -->
+            <div class="text-center mb-12">
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                    <button onclick="showPage('order')" class="cta-button bg-[#ff4500] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#e03c00]">
+                        ORDER ONLINE NOW
+                    </button>
+                    <button onclick="showPage('menu')" class="cta-button bg-gray-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-600">
+                        VIEW FULL MENU
+                    </button>
                 </div>
             </div>
 
