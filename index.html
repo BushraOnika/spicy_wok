@@ -22,11 +22,7 @@
             color: #ff4500; /* Accent color on hover */
             text-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
         }
-        /* Adjusted max height of the logo image for maximum visibility */
-        .navbar-logo {
-            max-height: 70px; /* Increased to 70px for a very prominent logo */
-            max-width: 150px; 
-        }
+        /* Removed .navbar-logo custom CSS. Using Tailwind classes directly on the image now. */
 
         /* --- Video Hero Styling: Pure Visual Impact --- */
         .hero-video-container {
@@ -91,13 +87,13 @@
 
     <nav class="sticky top-0 z-50 bg-black/80 backdrop-blur-sm shadow-xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Increased navbar height to h-24 (96px) -->
-            <div class="flex items-center justify-between h-24"> 
+            <!-- Navbar height increased to h-32 (128px) to allow for a massive logo -->
+            <div class="flex items-center justify-between h-32"> 
                 <div class="flex-shrink-0 flex items-center">
-                    <!-- Increased logo container height to h-24 -->
-                    <div class="h-24 flex items-center py-2"> 
-                        <!-- Added custom CSS class 'navbar-logo' to control the size -->
-                        <img src="logo.jpeg" alt="Spicy Wok Logo" class="navbar-logo object-contain">
+                    <!-- Logo container height increased to h-32 -->
+                    <div class="h-32 flex items-center py-2"> 
+                        <!-- Logo size set directly using h-28 (112px) Tailwind class -->
+                        <img src="logo.jpeg" alt="Spicy Wok Logo" class="h-28 w-auto object-contain">
                     </div>
                 </div>
                 <div class="hidden md:block">
