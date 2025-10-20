@@ -23,11 +23,10 @@
             text-shadow: 0 0 5px rgba(255, 69, 0, 0.5);
         }
 
-        /* --- New Video Hero Styling --- */
+        /* --- Video Hero Styling: Pure Visual Impact --- */
         .hero-video-container {
             position: relative;
             overflow: hidden;
-            /* Increased height for maximum visual impact */
             min-height: 75vh; 
         }
         .hero-video {
@@ -40,13 +39,25 @@
             transform: translate(-50%, -50%);
             z-index: 10;
         }
-        /* .hero-overlay CSS is removed to show the video clearly */
+        
+        /* Retained: Dark Overlay for mood and contrast, giving the video a "good" look */
+        .hero-video-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.45); /* Slightly darker overlay for dramatic effect */
+            z-index: 20; 
+        }
 
         .hero-content {
-            /* Content is intentionally empty, but keeping the container for future use */
-            position: relative;
+            /* Content is intentionally empty and positioned to be fully hidden */
+            position: absolute;
             z-index: 30;
             height: 100%;
+            width: 100%;
         }
         /* ------------------------------- */
 
@@ -77,7 +88,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0 flex items-center">
-                    <!-- Nav Logo: This is the only place the logo image appears now -->
+                    <!-- Nav Logo -->
                     <div class="h-20 flex items-center py-2"> 
                         <img src="logo.jpeg" alt="Spicy Wok Logo" class="max-h-full max-w-full object-contain">
                     </div>
@@ -116,21 +127,21 @@
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
         <section id="home-page" class="page-content">
-            <!-- Hero Section: Video only in background, title is descriptive, not a logo -->
-            <div class="hero-video-container rounded-xl shadow-2xl mb-4">
-                <!-- Video Background Element (Full visibility, no overlay) -->
+            <!-- Hero Section: Video background with dark overlay, NO text content -->
+            <div class="hero-video-container rounded-xl shadow-2xl mb-8">
+                <!-- Video Background Element -->
                 <video class="hero-video" autoplay loop muted playsinline poster="https://placehold.co/1200x600/1f2937/f3f4f6?text=Vibrant+Wok+Cooking+Fallback">
                     <source src="cafe.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
 
-                <!-- Content Layer (Now completely empty) -->
+                <!-- Content Layer (Now completely empty per user request) -->
                 <div class="hero-content">
-                    <!-- Text removed per user request - This div is intentionally left empty -->
+                    <!-- INTENTIONALLY EMPTY FOR A PURE VISUAL HERO -->
                 </div>
             </div>
 
-            <!-- CTA Buttons moved OUTSIDE the video container -->
+            <!-- CTA Buttons moved back OUTSIDE and BELOW the video container -->
             <div class="text-center mb-12">
                 <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                     <button onclick="showPage('order')" class="cta-button bg-[#ff4500] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-[#e03c00]">
